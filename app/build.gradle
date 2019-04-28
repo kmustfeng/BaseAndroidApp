@@ -21,6 +21,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    // support lib
     implementation "com.android.support:appcompat-v7:${support_lib_version}"
     implementation "com.android.support.constraint:constraint-layout:${constraint_layout_version}"
 
