@@ -37,6 +37,19 @@ dependencies {
     implementation "tv.danmaku.ijk.media:ijkplayer-java:${ijkplayer_version}"
     implementation "tv.danmaku.ijk.media:ijkplayer-armv7a:${ijkplayer_version}"
 
+    // http
+    implementation "com.squareup.okhttp3:okhttp:${okhttp_version}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okhttp_version}"
+    implementation group: 'com.facebook.stetho', name: 'stetho', version: '1.5.0'
+    implementation group: 'com.facebook.stetho', name: 'stetho-okhttp3', version: '1.5.0'
+    implementation("com.squareup.retrofit2:retrofit:${retrofit_version}") {
+        exclude(module: "rxjava")
+    }
+    implementation("com.squareup.retrofit2:adapter-rxjava2:${retrofit_version}") {
+        exclude(module: "rxjava")
+    }
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+
     // test lib
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
