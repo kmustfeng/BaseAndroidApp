@@ -1,7 +1,6 @@
 package com.kmust.feng.baseandroidapp;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.kmust.feng.baseandroidapp.base.BaseActivity;
