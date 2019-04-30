@@ -7,4 +7,15 @@
     <color name="transparent">#00000000</color>
     <color name="main_page_bg">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="black_80">#cc000000</color>
+    <color name="black_70">#B2000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_45">#73000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_00">#00000000</color>
+
 </resources>

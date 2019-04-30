@@ -65,4 +65,8 @@ dependencies {
 
     // bugly update
     implementation "com.tencent.bugly:crashreport_upgrade:${bugly_update_version}"
+
+    // butterknife
+    implementation "com.jakewharton:butterknife:${butterknife_version}"
+    kapt "com.jakewharton:butterknife-compiler:${butterknife_version}"
 }
