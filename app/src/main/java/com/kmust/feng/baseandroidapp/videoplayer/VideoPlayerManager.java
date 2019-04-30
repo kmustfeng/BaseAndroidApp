@@ -11,6 +11,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.upstream.FileDataSourceFactory;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
+import com.google.android.exoplayer2.upstream.cache.Cache;
 import com.google.android.exoplayer2.upstream.cache.CacheDataSinkFactory;
 import com.google.android.exoplayer2.upstream.cache.CacheDataSource;
 import com.google.android.exoplayer2.upstream.cache.CacheDataSourceFactory;
@@ -30,8 +31,8 @@ import java.io.File;
 public class VideoPlayerManager {
 
     private static VideoPlayerManager playerManager;
-    private static long maxCacheSize = 1024 * 1024 * 1024;
-    private static long maxFileSize = 5 * 1024 * 1024;
+    private static long maxCacheSize = Long.MAX_VALUE;
+    private static long maxFileSize = 512 * 1024 * 1024;
 
     public static VideoPlayerManager getInstance() {
         if (playerManager == null) {
@@ -44,12 +45,8 @@ public class VideoPlayerManager {
         return playerManager;
     }
 
-    private static final String DOWNLOAD_ACTION_FILE = "actions";
-    private static final String DOWNLOAD_TRACKER_ACTION_FILE = "tracked_actions";
-    private static final String DOWNLOAD_CONTENT_DIRECTORY = "downloads";
-    private static final int MAX_SIMULTANEOUS_DOWNLOADS = 2;
-
-    protected String userAgent;
+    private String userAgent;
+    private Cache videoCache;
 
     private VideoPlayerManager() {
         userAgent = getUserAgent(Frameworks.getApplication(), ResourceUtil.getString(R.string.app_name));
@@ -65,17 +62,23 @@ public class VideoPlayerManager {
         return new DefaultHttpDataSourceFactory(userAgent);
     }
 
-    private static CacheDataSourceFactory buildReadOnlyCacheDataSource(DefaultDataSourceFactory upstreamFactory) {
-        LeastRecentlyUsedCacheEvictor evictor = new LeastRecentlyUsedCacheEvictor(maxCacheSize);
-        SimpleCache simpleCache = new SimpleCache(new File(
-                Frameworks.getApplication().getCacheDir(), "media"), evictor);
+    private CacheDataSourceFactory buildReadOnlyCacheDataSource(DefaultDataSourceFactory upstreamFactory) {
         return new CacheDataSourceFactory(
-                simpleCache,
+                getVideoCache(),
                 upstreamFactory,
                 new FileDataSourceFactory(),
-                new CacheDataSinkFactory(simpleCache, maxFileSize),
+                new CacheDataSinkFactory(getVideoCache(), maxFileSize),
                 CacheDataSource.FLAG_IGNORE_CACHE_ON_ERROR,
                 /* eventListener= */ null);
+    }
+
+    private Cache getVideoCache() {
+        if (videoCache == null) {
+            LeastRecentlyUsedCacheEvictor evictor = new LeastRecentlyUsedCacheEvictor(maxCacheSize);
+            videoCache = new SimpleCache(new File(
+                    Frameworks.getApplication().getCacheDir(), "media"), evictor);
+        }
+        return videoCache;
     }
 
     /**

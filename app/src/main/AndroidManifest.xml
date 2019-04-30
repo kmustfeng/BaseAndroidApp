@@ -38,15 +38,11 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <!-- 下载进程 -->
-        <service
-            android:name=".videoplayer.SimpleDownloadService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
+        <!-- 视频播放页 -->
+        <activity
+            android:name=".videoplayer.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

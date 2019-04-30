@@ -101,9 +101,9 @@ public class BaseVideoPlayView extends ConstraintLayout implements
      *
      * @param url 视频地址
      */
-    public void playVideo(String url) {
+    public void playVideo(String url, String overrideExtension) {
         Uri videoUri = Uri.parse(url);
-        mediaSource = buildMediaSource(videoUri, null);
+        mediaSource = buildMediaSource(videoUri, overrideExtension);
         boolean haveStartPosition = startWindow != C.INDEX_UNSET;
         if (haveStartPosition) {
             player.seekTo(startWindow, startPosition);
@@ -136,11 +136,17 @@ public class BaseVideoPlayView extends ConstraintLayout implements
         if (exoPlayerView != null) {
             exoPlayerView.onResume();
         }
+        if (player != null) {
+            player.setPlayWhenReady(true);
+        }
     }
 
     public void onPause() {
         if (exoPlayerView != null) {
             exoPlayerView.onPause();
+        }
+        if (player != null) {
+            player.setPlayWhenReady(false);
         }
     }
 
@@ -172,6 +178,7 @@ public class BaseVideoPlayView extends ConstraintLayout implements
     private void initPlayerView() {
         exoPlayerView.setControllerVisibilityListener(this);
         exoPlayerView.setErrorMessageProvider(new PlayerErrorMessageProvider());
+        exoPlayerView.getVideoSurfaceView().setKeepScreenOn(true);
         exoPlayerView.requestFocus();
         dataSourceFactory = buildDataSourceFactory();
         if (CookieHandler.getDefault() != DEFAULT_COOKIE_MANAGER) {
