@@ -1,11 +1,8 @@
 package com.kmust.feng.baseandroidapp.base;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-
-import com.kmust.feng.baseandroidapp.util.StatusBarUtils;
 
 /**
  * Created by LHF on 2019-04-28.
@@ -21,7 +18,6 @@ public class BaseActivity<T extends BaseViewModel> extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         initStatusBar();
         super.onCreate(savedInstanceState);
-        StatusBarUtils.setImmersiveStatusBar(this, Color.TRANSPARENT);
     }
 
     /**

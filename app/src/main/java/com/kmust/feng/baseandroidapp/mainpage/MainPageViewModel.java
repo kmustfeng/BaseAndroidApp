@@ -1,4 +1,4 @@
-package com.kmust.feng.baseandroidapp;
+package com.kmust.feng.baseandroidapp.mainpage;
 
 import android.app.Application;
 import android.support.annotation.NonNull;

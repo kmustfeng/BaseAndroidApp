@@ -18,7 +18,11 @@ allprojects {
     repositories {
         google()
         jcenter()
-
+        configurations.all {
+            // check for updates every build
+            resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+            resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+        }
     }
 }
 

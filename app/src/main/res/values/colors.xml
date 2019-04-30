@@ -6,4 +6,5 @@
 
     <color name="transparent">#00000000</color>
     <color name="main_page_bg">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

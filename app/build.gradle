@@ -4,7 +4,9 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
+
     compileSdkVersion "$compile_sdk_version" as Integer
+
     defaultConfig {
         applicationId "com.kmust.feng.baseandroidapp"
         minSdkVersion "$min_sdk_version" as Integer
@@ -12,12 +14,22 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'x86'//, 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 }
 
@@ -29,13 +41,14 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:${constraint_layout_version}"
 
     // lifecycle
-    implementation "android.arch.lifecycle:extensions:${lifecycle_version}"
+    implementation("android.arch.lifecycle:extensions:${lifecycle_version}") {
+        exclude(group: "com.android.support", module: "support-fragment")
+        exclude(group: "com.android.support", module: "support-annotations")
+    }
     kapt "android.arch.lifecycle:compiler:${lifecycle_version}"
 
-    // ijkplayer
-    // required, enough for most devices.
-    implementation "tv.danmaku.ijk.media:ijkplayer-java:${ijkplayer_version}"
-    implementation "tv.danmaku.ijk.media:ijkplayer-armv7a:${ijkplayer_version}"
+    // EXO-Player
+    implementation "com.google.android.exoplayer:exoplayer:2.9.6"
 
     // http
     implementation "com.squareup.okhttp3:okhttp:${okhttp_version}"
@@ -50,8 +63,6 @@ dependencies {
     }
     implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
 
-    // test lib
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // bugly update
+    implementation "com.tencent.bugly:crashreport_upgrade:${bugly_update_version}"
 }
