@@ -40,6 +40,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:${support_lib_version}"
     implementation "com.android.support:support-v4:${support_lib_version}"
     implementation "com.android.support.constraint:constraint-layout:${constraint_layout_version}"
+    implementation "com.android.support:recyclerview-v7:${support_lib_version}"
 
     // lifecycle
     implementation("android.arch.lifecycle:extensions:${lifecycle_version}") {
@@ -49,7 +50,7 @@ dependencies {
     kapt "android.arch.lifecycle:compiler:${lifecycle_version}"
 
     // EXO-Player
-    implementation "com.google.android.exoplayer:exoplayer:2.9.6"
+    implementation "com.google.android.exoplayer:exoplayer:${exo_player_version}"
 
     // http
     implementation "com.squareup.okhttp3:okhttp:${okhttp_version}"
@@ -70,4 +71,8 @@ dependencies {
     // butterknife
     implementation "com.jakewharton:butterknife:${butterknife_version}"
     kapt "com.jakewharton:butterknife-compiler:${butterknife_version}"
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
 }
