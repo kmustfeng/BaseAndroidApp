@@ -1,6 +1,7 @@
 package com.kmust.feng.baseandroidapp.app;
 
 import android.app.Application;
+import android.support.multidex.MultiDex;
 
 import com.kmust.feng.baseandroidapp.base.Frameworks;
 import com.kmust.feng.baseandroidapp.util.NetworkUtils;
@@ -14,6 +15,7 @@ public class MyCustomApplication extends Application {
 
     @Override
     public void onCreate() {
+        MultiDex.install(getApplicationContext());
         super.onCreate();
         Frameworks.init(getApplicationContext());
         NetworkUtils.registerDefaultNetworkCallback();
