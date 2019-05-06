@@ -19,9 +19,9 @@ public class BaseActivity<T extends BaseViewModel> extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         initStatusBar();
-        super.onCreate(savedInstanceState);
         // 设置沉浸式状态栏
         StatusBarUtils.setImmersiveStatusBar(this);
+        super.onCreate(savedInstanceState);
     }
 
     /**

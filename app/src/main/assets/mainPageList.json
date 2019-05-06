@@ -2,25 +2,25 @@
   {
     "title": "有喜欢的人",
     "coverImg": "https://ykimg.alicdn.com/develop/image/2019-01-07/c9767f1d1aa78ef3fc049fd82815c3e0.jpg",
-    "videoUri": "http://pl-ali.youku.com/playlist/m3u8?vid=XMzYwNDY2MjgyNA%3D%3D&type=mp4hd2v3&ups_client_netip=b72475f3&utid=KsVVFXSxSmQCAbckdfNg81VK&ccode=0590&psid=f03aa2ac43b7e444530e25e591b74738&duration=3410&expire=18000&drm_type=1&drm_device=10&ups_ts=1557059373&onOff=0&encr=0&ups_key=e28bf55a9629d49e48fef8ba451cd61e",
-    "videoFormat": "m3u8"
+    "videoUri": "https://www.youtube.com/api/manifest/dash/id/3aa39fa2cc27967f/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=A2716F75795F5D2AF0E88962FFCD10DB79384F29.84308FF04844498CE6FBCE4731507882B8307798&key=ik0",
+    "videoFormat": "mpd"
   },
   {
     "title": "王牌对王牌",
     "coverImg": "https://liangcang-material.alicdn.com/prod/upload/e3b56c8270d0478b80d73439e7209d18.jpg",
-    "videoUri": "http://pl-ali.youku.com/playlist/m3u8?vid=XNDE0Mzc0OTU3Ng&type=mp4hd2v3&ups_client_netip=b72475f3&utid=ZMxVFYszGlICAbckdfNexao%2B&ccode=0590&psid=d8f22e3b6af6f8ac356edd0a505f273f&duration=6884&expire=18000&drm_type=1&drm_device=10&ups_ts=1557061223&onOff=0&encr=0&ups_key=e5a5fffec4851c625115221557e3114b",
-    "videoFormat": "m3u8"
+    "videoUri": "https://www.youtube.com/api/manifest/dash/id/3aa39fa2cc27967f/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=A2716F75795F5D2AF0E88962FFCD10DB79384F29.84308FF04844498CE6FBCE4731507882B8307798&key=ik0",
+    "videoFormat": "mpd"
   },
   {
     "title": "蒋介石宴请宋庆龄等人 设计抓捕共产党人",
     "coverImg": "https://vthumb.ykimg.com/054101015CC66952AD8C70929E68C3D7",
-    "videoUri": "http://pl-ali.youku.com/playlist/m3u8?vid=XNDE1ODc3MzI3Mg&type=mp4hd2v3&ups_client_netip=b72475f3&utid=Ss1VFVds4FUCAbckdfNhzsUg&ccode=0590&psid=537ecedbc885ae15e33453ad6bbe8fa6&duration=66&expire=18000&drm_type=1&drm_device=10&ups_ts=1557061453&onOff=0&encr=0&ups_key=58fbe6bf391064cbb78de7c6a717ee14",
-    "videoFormat": "m3u8"
+    "videoUri": "https://www.youtube.com/api/manifest/dash/id/3aa39fa2cc27967f/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=A2716F75795F5D2AF0E88962FFCD10DB79384F29.84308FF04844498CE6FBCE4731507882B8307798&key=ik0",
+    "videoFormat": "mpd"
   },
   {
     "title": "哪些瞬间想换男朋友？",
     "coverImg": "https://vthumb.ykimg.com/054101015CC7A82815673C8C986B4541",
-    "videoUri": "http://pl-ali.youku.com/playlist/m3u8?vid=XNDE2MDE4Njc3Mg&type=mp4hd2v3&ups_client_netip=b72475f3&utid=%2FsxVFfUrJCoCAbckdfPN%2BT2d&ccode=0590&psid=a68061bd10e36298b4cc7227ef6eb8d6&duration=190&expire=18000&drm_type=1&drm_device=10&ups_ts=1557061377&onOff=0&encr=0&ups_key=bfa369dc06b93341c23d377e6382c75a",
-    "videoFormat": "m3u8"
+    "videoUri": "https://www.youtube.com/api/manifest/dash/id/3aa39fa2cc27967f/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=A2716F75795F5D2AF0E88962FFCD10DB79384F29.84308FF04844498CE6FBCE4731507882B8307798&key=ik0",
+    "videoFormat": "mpd"
   }
 ]
