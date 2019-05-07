@@ -2,8 +2,6 @@ package com.kmust.feng.baseandroidapp.update;
 
 import android.content.Context;
 
-import com.tencent.bugly.Bugly;
-
 /**
  * Created by LHF on 2019-04-29.
  * <p>
@@ -34,6 +32,5 @@ public class UpdateManager {
      * 初始化升级sdk
      */
     public void init(Context context) {
-        Bugly.init(context, BUGLY_APPID, false);
     }
 }

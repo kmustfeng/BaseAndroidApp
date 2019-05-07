@@ -3,8 +3,6 @@ package com.kmust.feng.baseandroidapp.util;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.v4.graphics.ColorUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;

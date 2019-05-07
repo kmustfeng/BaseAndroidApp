@@ -253,7 +253,10 @@ public class BaseVideoPlayView extends ConstraintLayout implements
                                             R.string.error_no_secure_decoder, decoderInitializationException.mimeType);
                         } else {
                             errorString =
-                                    ResourceUtil.getString(R.string.error_no_decoder, decoderInitializationException.mimeType);
+                                    ResourceUtil.getString(
+                                            R.string.error_no_decoder,
+                                            decoderInitializationException.mimeType
+                                    );
                         }
                     } else {
                         errorString =
