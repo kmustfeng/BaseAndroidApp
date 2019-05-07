@@ -8,6 +8,10 @@
         android:id="@+id/exo_player_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:resize_mode="fixed_width" />
+        app:controller_layout_id="@layout/layout_custom_video_play_controller"
+        app:fastforward_increment="10000"
+        app:resize_mode="fixed_width"
+        app:rewind_increment="10000"
+        app:use_controller="true" />
 
 </merge>

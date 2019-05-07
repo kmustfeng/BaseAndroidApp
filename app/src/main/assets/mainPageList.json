@@ -2,8 +2,8 @@
   {
     "title": "有喜欢的人",
     "coverImg": "https://ykimg.alicdn.com/develop/image/2019-01-07/c9767f1d1aa78ef3fc049fd82815c3e0.jpg",
-    "videoUri": "https://www.youtube.com/api/manifest/dash/id/3aa39fa2cc27967f/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=A2716F75795F5D2AF0E88962FFCD10DB79384F29.84308FF04844498CE6FBCE4731507882B8307798&key=ik0",
-    "videoFormat": "mpd"
+    "videoUri": "https://storage.googleapis.com/exoplayer-test-media-1/mkv/android-screens-lavf-56.36.100-aac-avc-main-1280x720.mkv",
+    "videoFormat": ""
   },
   {
     "title": "王牌对王牌",
